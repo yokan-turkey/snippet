@@ -1,0 +1,12 @@
+<% if flash[:alert] %>
+  <%= flash[:alert] %>
+<% end %>
+
+<%= form_tag(personalitys_insights_path, method: :post) do %>
+  <div><%= text_area_tag :text %></div>
+  <%= submit_tag  '判定' %>
+<% end %>
+
+<% if @response %>
+  <%= pp @response %>
+<% end %>
