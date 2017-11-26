@@ -7,6 +7,10 @@
   <%= submit_tag  '判定' %>
 <% end %>
 
+<%if @big5_graph %>
+  <%= high_chart("radar", @big5_graph) %>
+<% end %>
+
 <% if @response %>
   <%= pp @response %>
 <% end %>
